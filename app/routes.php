@@ -11,6 +11,4 @@
 |
 */
 
-Route::get('/', function() {
-	return View::make('layout');
-});
+Route::get('/', 'HomeController@showIndex');
