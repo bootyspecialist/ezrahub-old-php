@@ -16,7 +16,7 @@ header {
 
 #header-inner {
 	min-width: 960px;
-	max-width: 1250px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding: 0 20px 0 0;
 	height: 60px;
@@ -101,7 +101,7 @@ header h1 {
 
 main {
 	min-width: 960px;
-	max-width: 1250px;
+	max-width: 1100px;
 	margin: 0 auto;
 	padding: 20px;
 	background: #fff;
