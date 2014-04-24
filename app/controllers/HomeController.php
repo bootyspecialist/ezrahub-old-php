@@ -3,7 +3,7 @@
 class HomeController extends BaseController {
 
 	public function showIndex() {
-		return View::make('layout');
+		return View::make('layout')->nest('content', 'home');
 	}
 
 }

@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'HomeController@showIndex');
+
+Route::get('/thread/new', 'ThreadController@newThreadForm');
