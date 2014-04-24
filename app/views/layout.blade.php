@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>ezra hub - @yield('title')</title>
+        <title>ezrahub - @yield('title')</title>
         <meta name="description" content="Ezra Hub is a popular, student-run forum for Cornell University students. Anonymous posting and user accounts are allowed and everything from frats, sororities, classes, drugs, housing and more is discussed. Ezra Hub is not endorsed by Cornell University.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/css/normalize.css">
@@ -14,7 +14,8 @@
     <body>
         <header>
             <div id="header-inner">
-                <h1>ezra hub</h1>
+                <img id="shh" src="/img/shh.png" height="60"/>
+                <h1>ezrahub</h1>
                 <div id="search-bar">
                     <input type="text" name="search-input" placeholder="search threads and posts..." value="">
                 </div>
