@@ -35,6 +35,7 @@ header h1 {
 	font-family: 'Playfair Display';
 	font-size: 40px;
 	font-weight: 400;
+	color: #fff;
 }
 
 #search-bar {
@@ -57,12 +58,15 @@ header h1 {
 ::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
+
 :-moz-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
+
 ::-moz-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
+
 :-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
@@ -87,9 +91,14 @@ header h1 {
 
 #other-header-options ul li {
 	display: inline-block;
+	height: 40px;
+	margin: 10px 10px 0 0;
+}
+
+#other-header-options ul li a {
+	display: inline-block;
 	float: left;
 	line-height: 59px;
-	margin: 10px 0 0 0;
 	height: 40px;
 	width: 40px;
 	border-radius: 20px;
@@ -97,6 +106,16 @@ header h1 {
 	cursor: pointer;
 	text-align: center;
 	line-height: 42px;
+	color: #fff;
+	text-decoration: none;
+}
+
+li.signup-login i.lock {
+	color: #bc9b18;
+}
+
+li.signup-login i.user-unauthenticated {
+	color: #bbb;
 }
 
 main {

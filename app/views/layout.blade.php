@@ -14,15 +14,31 @@
     <body>
         <header>
             <div id="header-inner">
-                <img id="shh" src="/img/shh.png" height="60"/>
-                <h1>ezrahub</h1>
+                <a href="/">
+                    <img id="shh" src="/img/shh.png" height="60"/>
+                    <h1>ezrahub</h1>
+                </a>
                 <div id="search-bar">
                     <input type="text" name="search-input" placeholder="search threads and posts..." value="">
                 </div>
                 <div id="other-header-options">
                     <ul>
                         <li class="new-thread-button">
-                            <i class="fa fa-pencil-square-o"></i>
+                            <a href="/thread/new">
+                                +
+                                <i class="fa fa-comments"></i>
+                            </a>
+                        </li>
+                        <li class="signup-login">
+                            <a href="/login">
+                                <i class="lock fa fa-lock"></i>
+                                <i class="user-unauthenticated fa fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="get-help">
+                            <a href="/help">
+                                <i class="fa fa-question-circle"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
