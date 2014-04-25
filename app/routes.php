@@ -19,3 +19,4 @@ Route::get('/thread/new', 'ThreadController@newThreadForm');
 Route::post('/thread/new', 'ThreadController@processNewThread');
 
 //Posts
+Route::get('/thread/{slug}', 'ThreadController@viewThread');

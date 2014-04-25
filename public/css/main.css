@@ -139,6 +139,14 @@ main {
 	color: #666;
 }
 
+#new-thread-title {
+	width: 100%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	margin: 0 0 15px 0;
+	padding: 15px;
+	color: #666;
+}
+
 #new-thread-body {
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
@@ -146,26 +154,6 @@ main {
 	margin: 0;
 	padding: 15px;
 	color: #666;
-}
-
-#new-thread-body::-webkit-input-placeholder {
-    color: #888;
-}
-
-#new-thread-body:-moz-placeholder {
-    color: #888;
-}
-
-#new-thread-body::-moz-placeholder {
-    color: #888;
-}
-
-#new-thread-body:-ms-input-placeholder {
-    color: #888;
-}
-
-#new-thread-body:focus {
-	outline: 0;
 }
 
 div.formatting-buttons {
@@ -256,7 +244,6 @@ span.thread-title-highlight {
 }
 
 footer {
-	/*background: #e48975;*/
 	min-width: 960px;
 	max-width: 1100px;
 	margin: 0 auto;

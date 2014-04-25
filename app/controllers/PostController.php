@@ -2,7 +2,7 @@
 
 class PostController extends BaseController {
 
-	public function showWelcome() {
+	public function viewThread() {
 		return View::make('hello');
 	}
 
