@@ -179,7 +179,7 @@ div.formatting-buttons ul li {
 	text-align: center;
 	text-decoration: none;
 	outline: 1px dotted #ccc;
-	background: rgba(0, 0, 0, 0.04);
+	background: rgba(0, 0, 0, 0.02);
 }
 
 div.formatting-buttons ul li:active {
