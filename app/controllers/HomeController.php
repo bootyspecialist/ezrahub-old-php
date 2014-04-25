@@ -3,7 +3,8 @@
 class HomeController extends BaseController {
 
 	public function showIndex() {
-		return View::make('layout')->nest('content', 'home');
+		$threads = Thread::orderBy('updated_at', 'desc')->take(25)->get();
+		return View::make('layout')->nest('content', 'home', array('threads' => $threads));
 	}
 
 }

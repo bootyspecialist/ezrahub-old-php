@@ -17,6 +17,10 @@ h2 {
 	font-size: 18px;
 }
 
+h3 {
+	font-size: 15px;
+}
+
 header {
 	height: 60px;
 	background: #ae2523;
@@ -190,6 +194,11 @@ div.formatting-buttons ul li {
 	background: rgba(0, 0, 0, 0.04);
 }
 
+div.formatting-buttons ul li:active {
+	color: #333;
+	background: #ddd;
+}
+
 #submit-thread {
 	background: #dd5654;
 	color: #fff;
@@ -198,7 +207,52 @@ div.formatting-buttons ul li {
 	padding: 10px 55px;
 }
 
+#nope {
+	display: inline-block;
+	margin: 0 0 0 15px;
+	padding: 10px 10px;
+	cursor: pointer;
+	color: #ccc;
+	border: 1px dotted #ccc;
+}
+
+#nope.selected {
+	color: #333;
+	border: 1px dotted #aaa;
+	background: #ddd;
+}
+
 #posting-info {
 	display: inline-block;
 	margin: 0 15px;
+}
+
+h2#home-intro {
+	margin: 0 0 8px 0;
+}
+
+div.thread-preview {
+	width: 100%;
+	padding: 10px;
+	cursor: pointer;
+}
+
+div.thread-preview a {
+	text-decoration: none;
+}
+
+div.thread-preview:hover {
+	background: rgba(0, 136, 204, 0.05);
+}
+
+h3.thread-title {
+	margin: 0;
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #999;
+}
+
+span.thread-title-highlight {
+	text-decoration: underline;
+	color: #08c;
 }

@@ -27,6 +27,9 @@
 		</ul>
 	</div>
 	<input id="submit-thread" type="submit" value="Submit">
+	<div id="nope">
+		<i class="fa fa-eye-slash"></i>
+	</div>
 	<div id="posting-info">
 		Posting as: <b>{{ $user }}</b>
 	</div>
