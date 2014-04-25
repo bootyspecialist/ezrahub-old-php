@@ -11,6 +11,11 @@
 |
 */
 
+//Index
 Route::get('/', 'HomeController@showIndex');
 
+//Threads
 Route::get('/thread/new', 'ThreadController@newThreadForm');
+Route::post('/thread/new', 'ThreadController@processNewThread');
+
+//Posts

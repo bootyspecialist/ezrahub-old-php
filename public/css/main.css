@@ -7,6 +7,16 @@ body {
 	background: #f5f5f5;
 }
 
+h1, h2, h3, h4, h5 {
+	font-family: 'Playfair Display';
+	font-weight: 400;
+	margin: 0 0 15px 0;
+}
+
+h2 {
+	font-size: 18px;
+}
+
 header {
 	height: 60px;
 	background: #ae2523;
@@ -32,9 +42,7 @@ header {
 header h1 {
 	float: left;
 	margin: 0 20px 0 0;
-	font-family: 'Playfair Display';
 	font-size: 40px;
-	font-weight: 400;
 	color: #fff;
 }
 
@@ -55,19 +63,19 @@ header h1 {
 	width: 350px;
 }
 
-::-webkit-input-placeholder {
+#search-bar input::-webkit-input-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
 
-:-moz-placeholder {
+#search-bar input:-moz-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
 
-::-moz-placeholder {
+#search-bar input::-moz-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
 
-:-ms-input-placeholder {
+#search-bar input:-ms-input-placeholder {
     color: rgba(255, 255, 255, 0.25);
 }
 
@@ -115,14 +123,14 @@ li.signup-login i.lock {
 }
 
 li.signup-login i.user-unauthenticated {
-	color: #bbb;
+	color: #ccc;
 }
 
 main {
 	min-width: 960px;
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 20px;
+	padding: 15px 25px;
 	background: #fff;
 	color: #666;
 }
@@ -130,13 +138,56 @@ main {
 #new-thread-body {
 	width: 100%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	height: 500px;
-	margin: 0 0 15px 0;
+	height: 400px;
+	margin: 0;
 	padding: 15px;
+	color: #666;
+}
+
+#new-thread-body::-webkit-input-placeholder {
+    color: #888;
+}
+
+#new-thread-body:-moz-placeholder {
+    color: #888;
+}
+
+#new-thread-body::-moz-placeholder {
+    color: #888;
+}
+
+#new-thread-body:-ms-input-placeholder {
+    color: #888;
 }
 
 #new-thread-body:focus {
 	outline: 0;
+}
+
+div.formatting-buttons {
+	height: 30px;
+	margin: 20px 0;
+}
+
+div.formatting-buttons ul {
+	height: 30px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.formatting-buttons ul li {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	line-height: 29px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: 1px dotted #ccc;
+	background: rgba(0, 0, 0, 0.04);
 }
 
 #submit-thread {
@@ -144,7 +195,7 @@ main {
 	color: #fff;
 	outline: 0;
 	border: 0;
-	padding: 15px 25px;
+	padding: 10px 55px;
 }
 
 #posting-info {
