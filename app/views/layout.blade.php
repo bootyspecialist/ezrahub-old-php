@@ -45,6 +45,9 @@
             </div>
         </header>
         <main>{{ $content }}</main>
+        <footer>
+            <p>© May 2014 v3.1.1b | <a href="mailto:admin@ezrahub.com">admin@ezrahub.com</a></p>
+        </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="/js/plugins.js"></script>
         <script src="/js/main.js"></script>

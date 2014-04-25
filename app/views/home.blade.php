@@ -1,4 +1,3 @@
-<h2 id="home-intro">What Cornell University is up to today:</h2>
 @foreach($threads as $thread)
 	<div class="thread-preview">
 		<a href="/thread/{{ $thread->id }}">

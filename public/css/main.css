@@ -227,13 +227,10 @@ div.formatting-buttons ul li:active {
 	margin: 0 15px;
 }
 
-h2#home-intro {
-	margin: 0 0 8px 0;
-}
-
 div.thread-preview {
 	width: 100%;
 	padding: 10px;
+	margin: 0 0 3px 0;
 	cursor: pointer;
 }
 
@@ -255,4 +252,26 @@ h3.thread-title {
 span.thread-title-highlight {
 	text-decoration: underline;
 	color: #08c;
+	font-size: 15px;
+}
+
+footer {
+	/*background: #e48975;*/
+	min-width: 960px;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 10px;
+	height: 40px;
+	line-height: 40px;
+	color: #aaa;
+	font-size: 13px;
+}
+
+footer p {
+	margin: 0;
+}
+
+footer a {
+	color: #8ec4d9;
+	text-decoration: none;
 }
