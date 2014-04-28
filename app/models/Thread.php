@@ -12,6 +12,10 @@ class Thread extends Eloquent {
         $this->attributes['body'] = htmlspecialchars(trim($value));
     }
 
+    public function getBodyAttribute($value) {
+        return BBCoder::convert($value);
+    }
+
     public static $sluggable = array(
         'build_from' => 'title',
         'save_to'    => 'slug',

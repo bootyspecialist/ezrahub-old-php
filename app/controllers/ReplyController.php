@@ -23,7 +23,7 @@ class ReplyController extends BaseController {
 				'body' => $input['body'],
 				'user' => Hubizen::word(Request::getClientIp()),
 				'ip_addr' => Request::getClientIp(),
-				'location' => $location['city'] . ', ' . $location['state']
+				'location' => $location['city']
 			));
 			$thread->touch();
 			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug);

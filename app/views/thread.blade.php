@@ -2,10 +2,13 @@
 	<h2 class="thread-title">{{{ $thread->title }}}</h2>
 	<h3 class="thread-subtitle">
 		by <span class="thread-user">{{{ $thread->user }}}</span>
-		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}},
+		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}}
 		{{{ PrettyPrint::time($thread->created_at) }}} -
-		{{{ number_format($thread->views) }}} views</h3>
-	<p>{{{ $thread->body }}}</p>
+		{{{ number_format($thread->views) }}} views
+	</h3>
+	<div class="reply-body">
+		{{ $thread->body }}
+	</div>
 </div>
 @if (count($thread->replies) != 0)
 	<div id="replies">
@@ -13,12 +16,12 @@
 		@foreach($thread->replies as $reply)
 			<div class="reply">
 				<div class="reply-body">
-					{{{ $reply->body }}}
+					{{ $reply->body }}
 				</div>
 				<h5 class="reply-header">
 					<span class="thread-user">{{{ $thread->user }}}</span>
 					<span class="rest-of-reply-header">
-						from {{{ ($reply->location != '' ? $reply->location : 'The Moon') }}},
+						from {{{ ($reply->location != '' ? $reply->location : 'The Moon') }}}
 						{{{ PrettyPrint::time($thread->created_at) }}}
 					</span>
 				</h5>
@@ -29,7 +32,7 @@
 <div id="reply-form">
 	<form id="new-reply-form" action="/thread/{{{ $thread->id }}}/reply" method="post">
 	<h4 id="reply-to-thread">Reply to this thread:</h4>
-	<textarea name="body" id="new-reply-body" placeholder="Start writing here..."></textarea>
+	<textarea name="body" id="new-reply-body" class="bbcode-textarea" placeholder="Start writing here..."></textarea>
 	<div class="formatting-buttons">
 		<ul>
 			<li class="formatting-button bold" data-action="bold">

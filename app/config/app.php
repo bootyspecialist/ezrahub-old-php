@@ -120,7 +120,8 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
-		'Torann\GeoIP\GeoIPServiceProvider'
+		'Torann\GeoIP\GeoIPServiceProvider',
+		'hisorange\bbcoder\Providers\BBCoderServiceProvider'
 
 	),
 

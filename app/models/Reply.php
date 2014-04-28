@@ -8,6 +8,10 @@ class Reply extends Eloquent {
         $this->attributes['body'] = htmlspecialchars(trim($value));
     }
 
+    public function getBodyAttribute($value) {
+        return BBCoder::convert($value);
+    }
+
     public function thread() {
         return $this->belongsTo('Thread');
     }

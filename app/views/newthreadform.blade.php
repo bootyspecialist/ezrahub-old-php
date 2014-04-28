@@ -1,7 +1,7 @@
 <form id="new-thread-form" action="/thread/new" method="post">
 	<h2>Create a new thread:</h2>
 	<input type="text" name="title" id="new-thread-title" placeholder="Thread title (at least 15 characters)">
-	<textarea name="body" id="new-thread-body" placeholder="Start writing here..."></textarea>
+	<textarea name="body" id="new-thread-body" class="bbcode-textarea" placeholder="Start writing here..."></textarea>
 	<div class="formatting-buttons">
 		<ul>
 			<li class="formatting-button bold" data-action="bold">

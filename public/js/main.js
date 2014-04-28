@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	for(var i = 0; i < formattingbuttons.length; i++){
     	formattingbuttons[i].addEventListener('click', function() {
     		var action = this.getAttribute('data-action');
-    		var textarea = document.querySelector('#new-thread-body');
+    		var textarea = document.querySelector('.bbcode-textarea');
     		switch (action) {
 	            case "bold":
 	                insertTextAtCursor(textarea, '[b]bolded text[/b]');
