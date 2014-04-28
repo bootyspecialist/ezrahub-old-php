@@ -1,9 +1,9 @@
 <div id="op-post">
 	<h2 class="thread-title">{{{ $thread->title }}}</h2>
 	<h3 class="thread-subtitle">
+		{{{ PrettyPrint::time($thread->created_at) }}}
 		by <span class="thread-user">{{{ $thread->user }}}</span>
-		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}}
-		{{{ PrettyPrint::time($thread->created_at) }}} -
+		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}} -
 		{{{ number_format($thread->views) }}} views
 	</h3>
 	<div class="reply-body">
