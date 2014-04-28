@@ -3,13 +3,13 @@
 class ThreadController extends BaseController {
 
 	public function newThreadForm() {
-		//determine who the user will be
 		$user = Hubizen::word(Request::getClientIp());
-		return View::make('layout')->nest('content', 'newthreadform', array('user' => $user));
+		return View::make('layout', array('page_title' => 'New thread'))->nest('content', 'newthreadform', array('user' => $user));
 	}
 
 	public function processNewThread() {
 		$input = Input::all();
+		$location = GeoIP::getLocation(Request::getClientIp());
 		$validator = Validator::make(
 		    $input,
 		    array(
@@ -24,16 +24,21 @@ class ThreadController extends BaseController {
 				'title' => $input['title'],
 				'body' => $input['body'],
 				'user' => Hubizen::word(Request::getClientIp()),
-				'ip_addr' => Request::getClientIp()
+				'ip_addr' => Request::getClientIp(),
+				'location' => $location['city'] . ', ' . $location['state']
 			));
-			return Redirect::to('thread/' . $thread->id);
+			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug);
 		}
 
 	}
 
-	public function viewThread($slug) {
-		$thread = Thread::where('slug', $slug)->first();
-		return View::make('layout')->nest('content', 'thread', array('thread' => $thread));
+	public function viewThread($id, $slug) {
+		$thread = Thread::where('id', $id)->first();
+		$thread->timestamps = false;
+		$thread->views = $thread->views + rand(1, 3);
+		$thread->save();
+		$user = Hubizen::word(Request::getClientIp());
+		return View::make('layout', array('page_title' => '#' . $thread->id . ' - ' . $thread->title))->nest('content', 'thread', array('thread' => $thread, 'user' => $user));
 	}
 
 	public function deleteThread() {

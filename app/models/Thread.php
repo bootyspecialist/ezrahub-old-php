@@ -2,7 +2,7 @@
 
 class Thread extends Eloquent {
 
-	protected $fillable = array('title', 'body', 'user', 'ip_addr', 'sticky');
+	protected $fillable = array('title', 'body', 'user', 'ip_addr', 'location', 'sticky');
 
     public function setTitleAttribute($value) {
         $this->attributes['title'] = htmlspecialchars(trim($value));
@@ -16,5 +16,9 @@ class Thread extends Eloquent {
         'build_from' => 'title',
         'save_to'    => 'slug',
     );
+
+    public function replies() {
+        return $this->hasMany('Reply');
+    }
 
 }

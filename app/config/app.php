@@ -119,7 +119,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Cviebrock\EloquentSluggable\SluggableServiceProvider'
+		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+		'Torann\GeoIP\GeoIPServiceProvider'
 
 	),
 
@@ -186,7 +187,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Sluggable' => 'Cviebrock\EloquentSluggable\Facades\Sluggable'
+		'Sluggable' => 'Cviebrock\EloquentSluggable\Facades\Sluggable',
+		'GeoIP' => 'Torann\GeoIP\GeoIPFacade'
 
 	),
 

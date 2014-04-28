@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.*",
-		"cviebrock/eloquent-sluggable": "1.0.*"
+		"cviebrock/eloquent-sluggable": "1.0.*",
+		"torann/geoip": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
