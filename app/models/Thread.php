@@ -13,7 +13,7 @@ class Thread extends Eloquent {
     }
 
     public function getBodyAttribute($value) {
-        return BBCoder::convert($value);
+        return BBCoder::convert($value, 'ezrahub');
     }
 
     public static $sluggable = array(

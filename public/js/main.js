@@ -48,15 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     //Nope button
-    if (document.querySelector('#nope')) {
-    	var nopebutton = document.querySelector('#nope');
+    if (document.querySelector('#nope-button')) {
+    	var nopebutton = document.querySelector('#nope-button');
+    	var hidden_input = document.querySelector('#nope');
 	    nopebutton.addEventListener('click', function() {
 	    	if (this.classList.contains('selected')) {
 	    		this.className = '';
+	    		hidden_input.value = '';
 	    	} else {
 	    		this.className += 'selected';
+	    		hidden_input.value = 'nope';
 	    	}
 	    }, false);
     }
+
+    //Colored side borders for op posts
+    // if (document.querySelector('#op-post')) {
+    // 	var op_post = document.querySelector('#op-post');
+    // 	op_post.style['border-left'] = '6px solid #' + (Math.floor(Math.random()*0xffffff)|0x0f0f0f).toString(16);
+    // }
 
 }, false);

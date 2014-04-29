@@ -19,13 +19,17 @@ class ReplyController extends BaseController {
 			return $validator->messages();
 		} else {
 			$reply = Reply::create(array(
-				'thread_id' => $id,
+				'thread_id' => $thread->id,
 				'body' => $input['body'],
 				'user' => Hubizen::word(Request::getClientIp()),
 				'ip_addr' => Request::getClientIp(),
 				'location' => $location['city']
 			));
-			$thread->touch();
+			Slotmachine::sloot($thread, $reply);
+			Fratstar::butt_chug($thread, $reply);
+			if ($input['nope'] != 'nope') {
+				$thread->touch();
+			}
 			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug);
 		}
 

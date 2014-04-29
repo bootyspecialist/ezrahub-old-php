@@ -5,6 +5,7 @@
 body {
 	font-size: 15px;
 	background: #f5f5f5;
+	color: #666;
 	line-height: 1.4;
 }
 
@@ -150,7 +151,6 @@ main {
 	margin: 0 auto;
 	padding: 15px 25px;
 	background: #fff;
-	color: #666;
 }
 
 #new-thread-title {
@@ -213,7 +213,7 @@ div.formatting-buttons ul li:active {
 	padding: 10px 55px;
 }
 
-#nope {
+#nope-button {
 	display: inline-block;
 	margin: 0 0 0 15px;
 	padding: 10px 10px;
@@ -222,7 +222,7 @@ div.formatting-buttons ul li:active {
 	border: 1px dotted #ccc;
 }
 
-#nope.selected {
+#nope-button.selected {
 	color: #333;
 	border: 1px dotted #aaa;
 	background: #ddd;
@@ -267,11 +267,13 @@ span.thread-title-highlight {
 
 #op-post {
 	margin: 0;
-	padding: 0 0 10px 0;
+	padding: 0 0 0 15px;
+	border-left: 6px solid #aaa;
 }
 
 h2.thread-title {
-	margin: 0 0 3px 0;
+	margin: 0 0 5px 0;
+	padding: 5px 0 0 0;
 }
 
 h3.thread-subtitle {
@@ -279,7 +281,24 @@ h3.thread-subtitle {
 }
 
 #op-post div.reply-body {
-	margin: 10px 0;
+	margin: 15px 0;
+	padding: 0 0 10px 0;
+}
+
+div.reply-body p {
+	margin: 0;
+}
+
+div.reply-body blockquote {
+    display: inline-block;
+    margin: 0;
+    padding: 3px 8px;
+    color: #666;
+    background: #edf9ff;
+    border: 1px dotted #3387c4;
+    overflow: hidden;
+    position: relative;
+    max-width: 95%;
 }
 
 h4#replies-header {
@@ -287,11 +306,13 @@ h4#replies-header {
 }
 
 #replies {
-	margin: 0 0 15px 0;
+	margin: 20px 0 30px 0;
 }
 
 div.reply {
-	margin: 0 0 15px 0;
+	margin: 0 0 20px 15px;
+	padding: 5px 0 5px 10px;
+	border-left: 5px solid #ccc;
 }
 
 div.reply-body img {

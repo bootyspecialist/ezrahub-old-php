@@ -3,11 +3,11 @@
 	<h3 class="thread-subtitle">
 		{{{ PrettyPrint::time($thread->created_at) }}}
 		by <span class="thread-user">{{{ $thread->user }}}</span>
-		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}} -
+		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}} &#149;
 		{{{ number_format($thread->views) }}} views
 	</h3>
 	<div class="reply-body">
-		{{ $thread->body }}
+		<p>{{ $thread->body }}</p>
 	</div>
 </div>
 @if (count($thread->replies) != 0)
@@ -16,10 +16,10 @@
 		@foreach($thread->replies as $reply)
 			<div class="reply">
 				<div class="reply-body">
-					{{ $reply->body }}
+					<p>{{ $reply->body }}</p>
 				</div>
 				<h5 class="reply-header">
-					<span class="thread-user">{{{ $thread->user }}}</span>
+					<span class="thread-user">{{{ $reply->user }}}</span>
 					<span class="rest-of-reply-header">
 						from {{{ ($reply->location != '' ? $reply->location : 'The Moon') }}}
 						{{{ PrettyPrint::time($thread->created_at) }}}
@@ -59,8 +59,9 @@
 		</ul>
 	</div>
 	<input id="submit-thread" type="submit" value="Reply">
-	<div id="nope">
+	<div id="nope-button">
 		<i class="fa fa-eye-slash"></i>
+		<input type="hidden" name="nope" id="nope" value="" />
 	</div>
 	<div id="posting-info">
 		Replying as: <b>{{{ $user }}}</b>

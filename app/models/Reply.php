@@ -9,7 +9,7 @@ class Reply extends Eloquent {
     }
 
     public function getBodyAttribute($value) {
-        return BBCoder::convert($value);
+        return BBCoder::convert($value, 'ezrahub');
     }
 
     public function thread() {
