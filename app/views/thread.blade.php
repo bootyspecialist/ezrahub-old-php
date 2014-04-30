@@ -32,7 +32,15 @@
 <div id="reply-form">
 	<form id="new-reply-form" action="/thread/{{{ $thread->id }}}/reply" method="post">
 	<h4 id="reply-to-thread">Reply to this thread:</h4>
-	<textarea name="body" id="new-reply-body" class="bbcode-textarea" placeholder="Start writing here..."></textarea>
+	{{ Form::textarea('body', Input::old('body'), array('id' =>'new-reply-body', 'class' => 'bbcode-textarea', 'placeholder' => 'Start writing here...')) }}
+	@if (isset($errors) && count($errors) > 0)
+		<p class="errors">
+			<i class="fa fa-exclamation-triangle"></i>
+			@foreach ($errors->all() as $error)
+				{{{ $error }}}
+			@endforeach
+		</p>
+	@endif
 	<div class="formatting-buttons">
 		<ul>
 			<li class="formatting-button bold" data-action="bold">

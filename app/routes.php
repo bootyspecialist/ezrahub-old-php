@@ -15,9 +15,12 @@
 Route::get('/', 'HomeController@showIndex');
 
 //Threads
-Route::get('/thread/new', 'ThreadController@newThreadForm');
-Route::post('/thread/new', 'ThreadController@processNewThread');
-Route::get('/thread/{id}/{slug}', 'ThreadController@viewThread');
+Route::get('thread/new', 'ThreadController@newThreadForm');
+Route::post('thread/new', 'ThreadController@processNewThread');
+Route::get('thread/{id}/{slug}', 'ThreadController@showThread');
 
 //Replies
 Route::post('thread/{id}/reply', 'ReplyController@processNewReply');
+
+//User and login
+Route::get('login', 'UserController@showLoginPage');

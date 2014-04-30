@@ -17,7 +17,7 @@ class ReplyController extends BaseController {
 		    )
 		);
 		if ($validator->fails()) {
-			return $validator->messages();
+			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug)->withInput()->withErrors($validator);
 		} else {
 			$reply = Reply::create(array(
 				'thread_id' => $thread->id,

@@ -122,7 +122,8 @@ return array(
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 		'Torann\GeoIP\GeoIPServiceProvider',
 		'hisorange\bbcoder\Providers\BBCoderServiceProvider',
-		'Jordij\SweetCaptcha\SweetCaptchaServiceProvider'
+		'Jordij\SweetCaptcha\SweetCaptchaServiceProvider',
+		'Artdarek\OAuth\OAuthServiceProvider'
 
 	),
 
@@ -190,7 +191,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
 		'Sluggable' => 'Cviebrock\EloquentSluggable\Facades\Sluggable',
-		'GeoIP' => 'Torann\GeoIP\GeoIPFacade'
+		'GeoIP' => 'Torann\GeoIP\GeoIPFacade',
+		'OAuth' => 'Artdarek\OAuth\Facade\OAuth'
 
 	),
 

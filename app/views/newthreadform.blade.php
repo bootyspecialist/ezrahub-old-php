@@ -1,7 +1,15 @@
 <form id="new-thread-form" action="/thread/new" method="post">
 	<h2>Create a new thread:</h2>
-	<input type="text" name="title" id="new-thread-title" placeholder="Thread title (at least 15 characters)">
-	<textarea name="body" id="new-thread-body" class="bbcode-textarea" placeholder="Start writing here..."></textarea>
+	{{ Form::text('title', Input::old('title'), array('id' =>'new-thread-title', 'placeholder' => 'Thread title (at least 15 characters)')) }}
+	{{ Form::textarea('body', Input::old('body'), array('id' =>'new-thread-body', 'class' => 'bbcode-textarea', 'placeholder' => 'Start writing here...')) }}
+	@if (isset($errors) && count($errors) > 0)
+		<p class="errors">
+			<i class="fa fa-exclamation-triangle"></i>
+			@foreach ($errors->all() as $error)
+				{{{ $error }}}
+			@endforeach
+		</p>
+	@endif
 	<div class="formatting-buttons">
 		<ul>
 			<li class="formatting-button bold" data-action="bold">

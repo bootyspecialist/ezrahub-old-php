@@ -19,10 +19,10 @@ class ThreadController extends BaseController {
 		    )
 		);
 		if ($validator->fails()) {
-			return $validator->messages();
+			return Redirect::to('thread/new')->withInput()->withErrors($validator);
 		} else {
 			$thread = Thread::create(array(
-				'title' => $input['title'],
+				'title' => ucfirst($input['title']),
 				'body' => $input['body'],
 				'user' => Hubizen::word(Request::getClientIp()),
 				'ip_addr' => Request::getClientIp(),
@@ -33,7 +33,7 @@ class ThreadController extends BaseController {
 
 	}
 
-	public function viewThread($id, $slug) {
+	public function showThread($id, $slug) {
 		$thread = Thread::where('id', $id)->first();
 		$thread->timestamps = false;
 		$thread->views = $thread->views + rand(1, 3);

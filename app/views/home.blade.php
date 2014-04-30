@@ -1,6 +1,6 @@
 <h2 id="threads-title">Latest discussion ({{ date('F d, Y') }}):</h2>
 @foreach($threads as $thread)
-	<div class="thread-preview">
+	<div class="thread-preview{{{ ($thread->sticky ? ' sticky' : '') }}}" >
 		<a href="/thread/{{ $thread->id }}/{{ $thread->slug }}">
 			<h3 class="thread-title">
 				<span class="thread-title-highlight">{{{ $thread->title }}}</span>
