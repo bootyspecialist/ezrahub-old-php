@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h2 {
-	font-size: 18px;
+	font-size: 20px;
 }
 
 h3 {
@@ -450,5 +450,14 @@ footer p {
 
 footer a {
 	color: #8ec4d9;
+	text-decoration: none;
+}
+
+a.login-with-facebook {
+	display: inline-block;
+	margin: 10px 0;
+	padding: 10px 20px;
+	background: #4c66a4;
+	color: #fff;
 	text-decoration: none;
 }

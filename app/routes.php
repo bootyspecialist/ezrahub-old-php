@@ -24,3 +24,4 @@ Route::post('thread/{id}/reply', 'ReplyController@processNewReply');
 
 //User and login
 Route::get('login', 'UserController@showLoginPage');
+Route::get('facebook-login', 'UserController@loginWithFacebook');
