@@ -12,7 +12,8 @@ class ReplyController extends BaseController {
 		$validator = Validator::make(
 		    $input,
 		    array(
-		    	'body' => 'required|between:3,2500'
+		    	'body' => 'required|between:3,2500',
+		    	'sckey' => 'sweetcaptcha'
 		    )
 		);
 		if ($validator->fails()) {

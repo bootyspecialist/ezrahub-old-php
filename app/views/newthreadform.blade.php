@@ -27,6 +27,9 @@
 			</li>
 		</ul>
 	</div>
+	<div id="captcha">
+		{{ Form::sweetcaptcha() }}
+	</div>
 	<input id="submit-thread" type="submit" value="Submit">
 	<div id="posting-info">
 		Posting as: <b>{{ $user }}</b>

@@ -44,7 +44,11 @@
                 </div>
             </div>
         </header>
-        <main>{{ $content }}</main>
+        <main>
+            <div id="main-content">
+                {{ $content }}
+            </div>
+        </main>
         <footer>
             <p>© May 2014 v3.1.1b | <a href="mailto:admin@ezrahub.com">admin@ezrahub.com</a></p>
         </footer>

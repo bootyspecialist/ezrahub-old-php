@@ -14,7 +14,8 @@ class ThreadController extends BaseController {
 		    $input,
 		    array(
 		    	'title' => 'required|unique:threads|between:15,255',
-		    	'body' => 'required|between:25,5000'
+		    	'body' => 'required|between:25,5000',
+		    	'sckey' => 'sweetcaptcha'
 		    )
 		);
 		if ($validator->fails()) {

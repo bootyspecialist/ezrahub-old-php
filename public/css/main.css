@@ -5,7 +5,7 @@
 body {
 	font-size: 15px;
 	background: #f5f5f5;
-	color: #666;
+	color: #555;
 	line-height: 1.4;
 }
 
@@ -34,6 +34,10 @@ h5 {
 
 p {
 	margin: 10px 0;
+}
+
+a {
+	color: #08c;
 }
 
 header {
@@ -149,7 +153,7 @@ main {
 	min-width: 960px;
 	max-width: 1100px;
 	margin: 0 auto;
-	padding: 15px 25px;
+	padding: 15px 25px 20px 25px;
 	background: #fff;
 }
 
@@ -205,6 +209,32 @@ div.formatting-buttons ul li:active {
 	background: #ddd;
 }
 
+#captcha {
+	margin: 0 0 15px 0;
+}
+
+div.sweetcaptcha {
+	box-shadow: none !important;
+	border-radius: 0 !important;
+}
+
+#captcha div.sweetcaptcha ul li {
+	margin: 0 8px 0 0 !important;
+}
+
+#sc2powered {
+	display: none;
+}
+
+#captcha p {
+	color: #555;
+	margin: 0 0 5px 0;
+}
+
+#captcha a.reset {
+	display: none;
+}
+
 #submit-thread {
 	background: #dd5654;
 	color: #fff;
@@ -233,12 +263,20 @@ div.formatting-buttons ul li:active {
 	margin: 0 15px;
 }
 
+#threads-title {
+	margin: 0 0 10px 0;
+}
+
 div.thread-preview {
 	width: 100%;
-	padding: 10px;
+	padding: 6px 10px;
 	margin: 0 0 3px 0;
 	cursor: pointer;
 }
+
+/*div.thread-preview a:visited span.thread-title-highlight {
+	color: #92a4d5;
+}*/
 
 span.thread-user {
 	font-weight: bold;
@@ -249,7 +287,7 @@ div.thread-preview a {
 }
 
 div.thread-preview:hover {
-	background: rgba(0, 136, 204, 0.05);
+	background: rgba(0, 136, 204, 0.06);
 }
 
 h3.thread-title {
@@ -257,6 +295,9 @@ h3.thread-title {
 	font-size: 14px;
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #999;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 }
 
 span.thread-title-highlight {
@@ -267,13 +308,11 @@ span.thread-title-highlight {
 
 #op-post {
 	margin: 0;
-	padding: 0 0 0 15px;
-	border-left: 6px solid #aaa;
 }
 
 h2.thread-title {
 	margin: 0 0 5px 0;
-	padding: 5px 0 0 0;
+	padding: 0;
 }
 
 h3.thread-subtitle {
@@ -282,11 +321,18 @@ h3.thread-subtitle {
 
 #op-post div.reply-body {
 	margin: 15px 0;
-	padding: 0 0 10px 0;
+}
+
+div.reply-body {
+	display: inline-block;
 }
 
 div.reply-body p {
 	margin: 0;
+}
+
+div.reply-body a {
+	color: #008dec;
 }
 
 div.reply-body blockquote {
@@ -294,8 +340,8 @@ div.reply-body blockquote {
     margin: 0;
     padding: 3px 8px;
     color: #666;
-    background: #edf9ff;
-    border: 1px dotted #3387c4;
+    background: #eee;
+    border: 1px dotted #aaa;
     overflow: hidden;
     position: relative;
     max-width: 95%;
@@ -306,28 +352,57 @@ h4#replies-header {
 }
 
 #replies {
-	margin: 20px 0 30px 0;
+	margin: 15px 0 25px 0;
 }
 
 div.reply {
-	margin: 0 0 20px 15px;
+	margin: 0 0 20px 0;
 	padding: 5px 0 5px 10px;
-	border-left: 5px solid #ccc;
-}
-
-div.reply-body img {
-	max-width: 300px;
-	max-height: 300px;
+	border-left: 4px solid #ccc;
 }
 
 h5.reply-header {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	margin: 8px 0 0 0;
+	margin: 0 0 8px 0;
 	font-size: 14px;
 }
 
 span.rest-of-reply-header {
 	color: #888;
+}
+
+div#pagination {
+	margin: 20px 0 0 0;
+}
+
+ul.pagination {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+ul.pagination li {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	line-height: 29px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: 1px dotted #ccc;
+	background: rgba(0, 0, 0, 0.02);
+}
+
+ul.pagination li.active {
+	font-weight: bold;
+}
+
+ul.pagination li a {
+	text-decoration: none;
+	color: #666;
 }
 
 footer {

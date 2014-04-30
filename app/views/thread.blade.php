@@ -3,8 +3,8 @@
 	<h3 class="thread-subtitle">
 		{{{ PrettyPrint::time($thread->created_at) }}}
 		by <span class="thread-user">{{{ $thread->user }}}</span>
-		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}} &#149;
-		{{{ number_format($thread->views) }}} views
+		from {{{ ($thread->location != '' ? $thread->location : 'The Moon') }}},
+		{{{ number_format($thread->views) }}} views, {{{ $thread->replies->count() }}} repl{{{ ($thread->replies->count() > 1 || $thread->replies->count() == 0 ? 'ies' : 'y') }}}
 	</h3>
 	<div class="reply-body">
 		<p>{{ $thread->body }}</p>
@@ -12,12 +12,9 @@
 </div>
 @if (count($thread->replies) != 0)
 	<div id="replies">
-		<h4 id="replies-header">Replies ({{{ $thread->replies->count() }}}):</h4>
+		<h4 id="replies-header">Replies:</h4>
 		@foreach($thread->replies as $reply)
 			<div class="reply">
-				<div class="reply-body">
-					<p>{{ $reply->body }}</p>
-				</div>
 				<h5 class="reply-header">
 					<span class="thread-user">{{{ $reply->user }}}</span>
 					<span class="rest-of-reply-header">
@@ -25,6 +22,9 @@
 						{{{ PrettyPrint::time($thread->created_at) }}}
 					</span>
 				</h5>
+				<div class="reply-body">
+					<p>{{ $reply->body }}</p>
+				</div>
 			</div>
 		@endforeach
 	</div>
@@ -57,6 +57,9 @@
 				<i class="fa fa-strikethrough"></i>
 			</li>
 		</ul>
+	</div>
+	<div id="captcha">
+		{{ Form::sweetcaptcha() }}
 	</div>
 	<input id="submit-thread" type="submit" value="Reply">
 	<div id="nope-button">

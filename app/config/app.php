@@ -121,7 +121,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 		'Torann\GeoIP\GeoIPServiceProvider',
-		'hisorange\bbcoder\Providers\BBCoderServiceProvider'
+		'hisorange\bbcoder\Providers\BBCoderServiceProvider',
+		'Jordij\SweetCaptcha\SweetCaptchaServiceProvider'
 
 	),
 

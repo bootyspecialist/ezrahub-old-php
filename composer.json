@@ -7,7 +7,8 @@
 		"laravel/framework": "4.1.*",
 		"cviebrock/eloquent-sluggable": "1.0.*",
 		"torann/geoip": "dev-master",
-		"hisorange/bbcoder": "dev-master"
+		"hisorange/bbcoder": "dev-master",
+		"jordij/sweet-captcha": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
